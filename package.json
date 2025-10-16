@@ -1,0 +1,24 @@
+{
+  "name": "backend-byron-investimentos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaovicassis/backend-byron-investimentos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaovicassis/backend-byron-investimentos/issues"
+  },
+  "homepage": "https://github.com/joaovicassis/backend-byron-investimentos#readme",
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "typescript": "^5.9.3"
+  }
+}
