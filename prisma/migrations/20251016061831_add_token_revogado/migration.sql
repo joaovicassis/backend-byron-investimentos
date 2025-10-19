@@ -1,0 +1,6 @@
+-- CreateTable
+CREATE TABLE "TokenRevogado" (
+    "jti" TEXT NOT NULL PRIMARY KEY,
+    "exp" DATETIME NOT NULL,
+    "created_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+  id           String         @id @default(cuid())
+  name         String
+  email        String         @unique
+  password     String
+  created_at   DateTime       @default(now())
+  updated_at   DateTime       @updatedAt
+  investments  Investimento[]
+}
+
+model Investimento {
+  id             String   @id @default(cuid())
+  name           String
+  investedValue  Decimal
+  quantity       Int
+  dateInvested   DateTime
+  ticker         String
+  created_at     DateTime @default(now())
+  updated_at     DateTime @updatedAt
+
+  user_id String
+  usuario Usuario @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+model TokenRevogado {
+  jti        String   @id
+  exp        DateTime
+  created_at DateTime @default(now())
+}
+
